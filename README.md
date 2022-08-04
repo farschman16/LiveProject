@@ -2,7 +2,7 @@
 Live project 2 week sprint completed through the Tech Academy
 
 ## Introduction
-The final two weeks of coursework at the Tech Academy was a two week sprint working on an ASP.NET MVC C# project with a code first Entity Framework Database. Having the opportunity to work on a project in the middle of its lifecycle, I was able to see how other developers on the project were able to solve problems, create features, and fit all the different pieces of the project together. I worked on some [back end stories](#back-end-stories) and a few [front end stories(#front-end-stories) that utilized different skillsets learned throughout the boot camp. After completion of this project sprint, I'm even more eager to start working on large projects on a bigger scale professionally.
+The final two weeks of coursework at the Tech Academy was a two week sprint working on an ASP.NET MVC C# project with a code first Entity Framework Database. Having the opportunity to work on a project in the middle of its lifecycle, I was able to see how other developers on the project were able to solve problems, create features, and fit all the different pieces of the project together. I worked on some [back end stories](#back-end-stories) and a few [front end stories](#front-end-stories) that utilized different skillsets learned throughout the boot camp. After completion of this project sprint, I'm even more eager to start working on large projects on a bigger scale professionally.
   
 Here are some of the stories I worked on during the two week sprint:
 
@@ -119,6 +119,7 @@ Once the photo is then uploaded and stored, I had to create a way of retrieving 
 ## Front End Stories
 * [Style Create and Edit Pages](#style-create-and-edit-pages)
 * [SignIn Page Styling](#signin-page-styling)
+* [Index Flexbox](#index-flexbox)
 
 ### Style Create and Edit Pages
 The form to add a photo needed to be styled, including updated buttons, text placeholders,  colors matching the client's color palette, centering the form, and button hover effects. Wrapped entire form in <div id="BlogPhoto-Create--FormContainer"> and added CSS.
@@ -248,6 +249,42 @@ Went to the main site CSS sheet to style the list and p tags, creating 4 even co
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
+      }
+  
+### Index Flexbox
+The photo index page needed styled so each photo would display in a grid, and once hovered, "edit" and "delete" buttons would show. The flexbox HTML was shown above in step [Photo Storage & Retrieval](#photo-storage-and-retrieval). The CSS to style the photos added is here (this was a work in progress with the sprint ended and was not a required task):
+  
+      .BlogPhoto-Index--card-body{
+           display: none;
+      }
+
+      .BlogPhoto-Index--card{
+          display: block;
+          opacity: 1;
+          transition: .5s ease;
+          backface-visibility: hidden;
+      }
+
+      .BlogPhoto-Index--card:hover .BlogPhoto-Index--card-body {
+          display: block;
+      }
+
+      .BlogPhoto-Index--Flexbox {
+
+          display: flex;
+          flex-flow: row wrap;
+          flex-direction: row;
+          flex-basis:30%;
+          justify-content: space-around;
+
+      }
+      .BlogPhoto-Index--Overlay {
+          position: relative;
+          opacity: 0;
+
+      }
+      .BlogPhoto-Index--card:hover .BlogPhoto-Index--Overlay{
+          opacity: 20%;
       }
 
 
